@@ -1,10 +1,11 @@
 package coms.SpringBootApp.controllers;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class TestController {
 
 	@GetMapping("/pg1")
@@ -25,4 +26,9 @@ public class TestController {
 		return "Page2";
 	}
 
+	@GetMapping("/test")
+	public String Test()
+	{
+		return "this is Test Jenkins";
+	}
 }
